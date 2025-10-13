@@ -1,0 +1,69 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    concepts                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
+#    Updated: 2025/10/14 01:29:58 by gomandam         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+## Control Flow of the PHILOSOPHERS Problem
+
+The control flow of the **PHILOSOPHERS** problem involves managing the activities
+of multiple philosophers (threads) who share limited resources (forks) while alternately
+thinking and eating. Here’s a breakdown of the key steps in the control flow:
+
+### Initial Setup
+
+1. **Initialization**: 
+   - Each philosopher is assigned a unique identifier.
+   - Forks (resources) are initialized, typically represented as mutexes.
+   - Philosophers are created as threads.
+
+### Main Loop
+
+Each philosopher goes through the following cycle:
+
+1. **Thinking**:
+   - The philosopher enters a thinking state, typically represented by a sleep or wait function.
+   - A random delay may be introduced to simulate varying thinking times.
+
+2. **Attempt to Eat**:
+   - The philosopher tries to pick up the left fork.
+   - If the left fork is available, the philosopher locks the mutex for the left fork.
+   - The philosopher then tries to pick up the right fork.
+   - If the right fork is also available, the philosopher locks the mutex for the right fork. 
+   - If either fork isn't available, the philosopher releases any
+	already held forks and goes back to the thinking state.
+
+3. **Eating**:
+   - Once both forks are successfully picked up, the philosopher enters the eating state.
+   - A sleep or wait function represents the eating duration.
+
+4. **Releasing Forks**:
+   - After eating, the philosopher releases both forks by unlocking the corresponding mutexes.
+   - This allows other philosophers to access the forks.
+
+5. **Loop**:
+   - The philosopher goes back to thinking, and the process repeats.
+
+### Handling Deadlock
+
+Handling deadlocks is crucial in this flow:
+
+- **Resource Hierarchy**: One common solution is to impose a strict order
+on how forks are picked up (e.g., always pick up the lower-numbered fork first).
+- **Timeout Mechanisms**: Philosophers can retry after a timeout if they can't acquire both forks.
+- **The Waiter Solution**: Another option is to have a waiter who regulates access to the forks,
+	allowing only a limited number of philosophers to eat at once.
+
+### Overall Flow
+
+- The overall control flow of the PHILOSOPHERS problem balances thinking and eating among philosophers
+	while carefully managing access to shared resources to avoid deadlocks and ensure efficient operation. 
+
+By understanding this control flow, developers can better implement thread synchronization and resource
+	management techniques in concurrent programming.
