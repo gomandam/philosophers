@@ -1,0 +1,55 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    terminal-config                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/15 03:11:54 by gomandam          #+#    #+#              #
+#    Updated: 2025/10/15 03:35:58 by gomandam         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+With .bashrc and .zshrc in the same directory, these are also the color palettes.
+
+I. UNIX/Linux Terminal
+Initial Terminal Size
+Columns:	90
+Rows:		35
+
+Font:		Monospace
+Size:		22
+
+Cell Spacing
+Width:		1.10
+Height:		1.15
+
+
+Default
+Text:		E8E3E3
+Background:	25262A
+
+Highlight
+Text:           FFFFFF
+Background:     000000
+
+
+
+II. Palette
+Custom Scheme
+Palette Entry 0		171421
+Palette Entry 1		C2301D
+Palette Entry 2		26A269
+Palette Entry 3		A2734C
+Palette Entry 4		12488B
+Palette Entry 5		E39F0B
+Palette Entry 6		2AA1B3
+Palette Entry 7		D0CFCC
+Palette Entry 8		5E5C64
+Palette Entry 9		C2301D
+Palette Entry 10	33D17A
+Palette Entry 11	E9AD0C
+Palette Entry 12	2A7BDE
+Palette Entry 13	E39F0B
+Palette Entry 14	33C7DE
+Palette Entry 15	FFFFFF
