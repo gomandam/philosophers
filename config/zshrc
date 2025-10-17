@@ -1,0 +1,25 @@
+# Aliases: RTFM for more info.
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# 42 Madrid > Personal aliases
+alias norm='norminette' 
+
+# 42 Madrid USER and MAIL. Authored by gomandam.
+export MAIL=gomandam@student.42madrid
+export USER=gomandam
+
+# Alias specific for the current project directory.
+# Change path for new projects.
+alias cdintra='cd ~/home/minishell/minishell-gab/ && la'
+
+# Change to the last directory when a new shell starts. Authored by gomandam.
+function cd() {
+    builtin cd "$@" && pwd > /tmp/current_dir
+}
+
+# Path of last directory when a new shell starts. Authored by gomandam.
+if [ -f /tmp/current_dir ]; then
+    cd "$(cat /tmp/current_dir)"
+fi
