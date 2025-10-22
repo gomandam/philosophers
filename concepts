@@ -6,22 +6,24 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/14 01:29:58 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/22 22:18:31 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## Control Flow of the PHILOSOPHERS Problem
 
-The control flow of the **PHILOSOPHERS** problem involves managing the activities
-of multiple philosophers (threads) who share limited resources (forks) while alternately
-thinking and eating. Here’s a breakdown of the key steps in the control flow:
+The control flow of the PHILOSOPHERS problem involves managing the activities
+of multiple philosophers (threads) who share limited resources (forks) while
+alternately thinking and eating. Control flow:
 
 ### Initial Setup
 
-1. **Initialization**: 
+1. Initialization: 
    - Each philosopher is assigned a unique identifier.
    - Forks (resources) are initialized, typically represented as mutexes.
-   - Philosophers are created as threads.
+   - Philosophers are created as t
+
+hreads.
 
 ### Main Loop
 
