@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/22 22:19:51 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/22 22:34:44 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,23 +49,21 @@ Each philosopher goes through the following cycle:
    - After eating, the philosopher releases both forks by unlocking the corresponding mutexes.
    - This allows other philosophers to access the forks.
 
-5. **Loop**:
+5. Loop:
    - The philosopher goes back to thinking, and the process repeats.
 
 ### Handling Deadlock
 
 Handling deadlocks is crucial in this flow:
 
-- **Resource Hierarchy**: One common solution is to impose a strict order
+- Resource Hierarchy: One common solution is to impose a strict order
 on how forks are picked up (e.g., always pick up the lower-numbered fork first).
-- **Timeout Mechanisms**: Philosophers can retry after a timeout if they can't acquire both forks.
-- **The Waiter Solution**: Another option is to have a waiter who regulates access to the forks,
+- Timeout Mechanisms: Philosophers can retry after a timeout if they can't acquire both forks.
+- The Waiter Solution: Another option is to have a waiter who regulates access to the forks,
 	allowing only a limited number of philosophers to eat at once.
 
 ### Overall Flow
-
 - The overall control flow of the PHILOSOPHERS problem balances thinking and eating among philosophers
 	while carefully managing access to shared resources to avoid deadlocks and ensure efficient operation. 
-
 By understanding this control flow, developers can better implement thread synchronization and resource
 	management techniques in concurrent programming.
