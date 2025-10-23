@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/23 23:54:10 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/23 23:57:42 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,7 @@ alternately thinking and eating. Control flow:
 1. Initialization: 
    - Each philosopher is assigned a unique identifier.
    - Forks (resources) are initialized, typically represented as mutexes.
-   - Philosophers are created as t
-
-hreads.
+   - Philosophers are created as threads.
 
 ### Main Loop
 
