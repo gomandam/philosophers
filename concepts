@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/23 23:52:18 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/23 23:54:10 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ hreads.
 ### Main Loop
 
 Each philosopher goes through the following cycle:
-
 1. Thinking:
    - The philosopher enters a thinking state, typically represented by a sleep or wait function.
    - A random delay may be introduced to simulate varying thinking times.
