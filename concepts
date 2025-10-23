@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/23 23:57:42 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/23 23:58:50 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,12 @@ of multiple philosophers (threads) who share limited resources (forks) while
 alternately thinking and eating. Control flow:
 
 ### Initial Setup
-
 1. Initialization: 
    - Each philosopher is assigned a unique identifier.
    - Forks (resources) are initialized, typically represented as mutexes.
    - Philosophers are created as threads.
 
 ### Main Loop
-
 Each philosopher goes through the following cycle:
 1. Thinking:
    - The philosopher enters a thinking state, typically represented by a sleep or wait function.
