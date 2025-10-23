@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/22 22:34:44 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/23 23:52:18 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ Each philosopher goes through the following cycle:
 1. Thinking:
    - The philosopher enters a thinking state, typically represented by a sleep or wait function.
    - A random delay may be introduced to simulate varying thinking times.
-
 2. Attempt to Eat:
    - The philosopher tries to pick up the left fork.
    - If the left fork is available, the philosopher locks the mutex for the left fork.
@@ -40,15 +39,12 @@ Each philosopher goes through the following cycle:
    - If the right fork is also available, the philosopher locks the mutex for the right fork. 
    - If either fork isn't available, the philosopher releases any
 	already held forks and goes back to the thinking state.
-
 3. Eating:
    - Once both forks are successfully picked up, the philosopher enters the eating state.
    - A sleep or wait function represents the eating duration.
-
 4. Releasing Forks:
    - After eating, the philosopher releases both forks by unlocking the corresponding mutexes.
    - This allows other philosophers to access the forks.
-
 5. Loop:
    - The philosopher goes back to thinking, and the process repeats.
 
