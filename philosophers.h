@@ -6,7 +6,7 @@
 /*   By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 16:13:16 by gomandam          #+#    #+#             */
-/*   Updated: 2025/10/24 20:03:13 by gomandam         ###   ########.fr       */
+/*   Updated: 2025/10/24 20:24:42 by gomandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 #include <unistd.h>
 #include <pthread.h> // mutex, thread, initialize
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdlib.h>
-// #include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/time.h>
 
 typedef struct s_mutex
 {
