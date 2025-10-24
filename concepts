@@ -6,14 +6,14 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/23 23:59:51 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/24 19:54:05 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## Control Flow of the PHILOSOPHERS Problem
-Control flow of the PHILOSOPHERS problem involves managing the activities
-of multiple philosophers (threads) who share limited resources (forks) while
-alternately thinking and eating. Control flow:
+PHILOSOPHERS involves managing the activities of multiple philosophers (threads)
+who share limited resources (forks) while alternately thinking and eating.
+
 ### Initial Setup
 1. Initialization: 
    - Each philosopher is assigned a unique identifier.
@@ -44,7 +44,6 @@ Each philosopher goes through the following cycle:
 ### Handling Deadlock
 
 Handling deadlocks is crucial in this flow:
-
 - Resource Hierarchy: One common solution is to impose a strict order
 on how forks are picked up (e.g., always pick up the lower-numbered fork first).
 - Timeout Mechanisms: Philosophers can retry after a timeout if they can't acquire both forks.
