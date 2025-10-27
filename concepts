@@ -6,7 +6,7 @@
 #    By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 01:27:08 by gomandam          #+#    #+#              #
-#    Updated: 2025/10/24 19:54:05 by gomandam         ###   ########.fr        #
+#    Updated: 2025/10/27 18:54:19 by gomandam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ who share limited resources (forks) while alternately thinking and eating.
    - Each philosopher is assigned a unique identifier.
    - Forks (resources) are initialized, typically represented as mutexes.
    - Philosophers are created as threads.
-
 ### Main Loop
 Each philosopher goes through the following cycle:
 1. Thinking:
@@ -40,9 +39,7 @@ Each philosopher goes through the following cycle:
    - This allows other philosophers to access the forks.
 5. Loop:
    - The philosopher goes back to thinking, and the process repeats.
-
 ### Handling Deadlock
-
 Handling deadlocks is crucial in this flow:
 - Resource Hierarchy: One common solution is to impose a strict order
 on how forks are picked up (e.g., always pick up the lower-numbered fork first).
