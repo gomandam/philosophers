@@ -6,11 +6,11 @@
 /*   By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 23:33:17 by gomandam          #+#    #+#             */
-/*   Updated: 2025/10/29 00:12:27 by gomandam         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:38:16 by gomandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "./philosophers.h"
 
 int	ft_isdigit(char c)
 {
@@ -27,7 +27,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-// redefined atoi()
+// refined atoi()
 int	ft_atoi(char *str)
 {
 	unsigned long long	nb;
@@ -50,4 +50,20 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (sign * nb);
+}
+
+size_t	get_current_time(void)
+{
+	struct time_value	time; //TO DO: structure
+
+	if (gettimeofday(&time, NULL) == -1)
+		write(2, "Error: gettimeofday() \n", 23);
+	return ();
+}
+
+int	ft_usleep(size_t milliseconds)
+{
+	size_t start;
+
+	start = get_current_time();
 }
