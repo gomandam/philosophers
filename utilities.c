@@ -3,23 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   utilities.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gomandam <gomandam@student.42madrid>       +#+  +:+       +#+        */
+/*   By: gomandam <gomandam@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 23:33:17 by gomandam          #+#    #+#             */
-/*   Updated: 2025/10/29 00:38:16 by gomandam         ###   ########.fr       */
+/*   Updated: 2025/10/30 01:19:38 by gomandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./philosophers.h"
 
-int	ft_isdigit(char c)
+int
+	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
 
-int	ft_isspace(char c)
+int
+	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\f' || c == '\n' || c == '\r' || c == '\t'
 		|| c == '\v')
@@ -28,7 +30,8 @@ int	ft_isspace(char c)
 }
 
 // refined atoi()
-int	ft_atoi(char *str)
+int
+	ft_atoi(char *str)
 {
 	unsigned long long	nb;
 	int					sign;
@@ -52,18 +55,22 @@ int	ft_atoi(char *str)
 	return (sign * nb);
 }
 
-size_t	get_current_time(void)
+//TO DO: structure
+// return ((time * (uint64_t)1000) + (time / 1000));
+size_t
+	get_time(void)
 {
-	struct time_value	time; //TO DO: structure
+	struct time_value	time;
 
 	if (gettimeofday(&time, NULL) == -1)
 		write(2, "Error: gettimeofday() \n", 23);
 	return ();
 }
 
-int	ft_usleep(size_t milliseconds)
+int
+	ft_usleep(size_t milliseconds)
 {
-	size_t start;
+	size_t	start;
 
 	start = get_current_time();
 }
